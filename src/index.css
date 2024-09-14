@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg_color;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-7 py-3 rounded-xl;
+  }
+  .img {
+    @apply w-24 h-[480px] object-cover rounded-lg;
+  }
+  .bg {
+    background-image: url("./assets//bg.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+  }
+  .box {
+    @apply p-5 flex flex-col gap-4 items-start rounded-xl hover:bg-purple-100 cursor-pointer;
+  }
+  .box h3 {
+    @apply font-medium;
+  }
+  .box img {
+    @apply w-16;
+  }
+
+  .box p {
+    @apply opacity-80 leading-7;
+  }
+  .box button {
+    @apply text-purple-500 font-medium;
+  }
+
+  .contact-bg {
+    background-image: url("./assets//bg.jpg");
+    background-position: center;
+    background-size: fill;
+    height: 400px;
+    width: 100%;
+    filter: invert(10%);
+  }
+  .menu {
+    @apply flex flex-col gap-4 items-center font-medium;
+  }
+  .icon {
+    @apply border border-slate-950 p-4 rounded-3xl cursor-pointer;
+  }
+}
