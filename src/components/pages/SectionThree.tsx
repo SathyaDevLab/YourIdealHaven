@@ -2,7 +2,7 @@ import { A11y, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-// import "swiper/css/navigation";
+import { useState } from "react";
 import {
   Image1,
   Image2,
@@ -12,9 +12,8 @@ import {
   Image6,
   Image7,
 } from "../../assets";
-import { useState } from "react";
 
-const SectionThree: React.FC = () => {
+const SectionThree = () => {
   const [swiper, setSwiper] = useState<any>(null);
 
   const [activeSlide, setActiveSlide] = useState(1);

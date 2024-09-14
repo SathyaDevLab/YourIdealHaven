@@ -1,6 +1,5 @@
-import React from "react";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <footer className="p-20 flex items-center justify-around">
       <div className="font-bold text-2xl">YourIdealHaven</div>
@@ -24,3 +23,4 @@ const Footer: React.FC = () => {
 };
 
 export { Footer };
+

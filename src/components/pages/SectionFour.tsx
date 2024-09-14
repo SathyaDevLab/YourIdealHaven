@@ -1,7 +1,5 @@
-import React from "react";
-import { Image3 } from "../../assets";
 
-const SectionFour: React.FC = () => {
+const SectionFour = () => {
   return (
     <section className="py-20">
       <div className="bg">
@@ -23,3 +21,4 @@ const SectionFour: React.FC = () => {
 };
 
 export { SectionFour };
+

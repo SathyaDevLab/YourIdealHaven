@@ -1,15 +1,7 @@
-import React, { useState } from "react";
-import {
-  Image1,
-  Image2,
-  Image3,
-  Image4,
-  Image5,
-  Image6,
-  Image7,
-} from "../../assets";
+import { useState } from "react";
+import { Image1, Image2, Image3, Image4, Image5, Image6 } from "../../assets";
 
-const SectionFive: React.FC = () => {
+const SectionFive = () => {
   const [isClick, setIsClick] = useState(false);
   const articles = [
     {
@@ -48,12 +40,6 @@ const SectionFive: React.FC = () => {
       headLine:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae rem beatae deleniti dolorum accusamus facere sapiente maxime, maiores necessitatibus. Earum!",
     },
-    // {
-    //   id: 7,
-    //   img: Image7,
-    //   headLine:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae rem beatae deleniti dolorum accusamus facere sapiente maxime, maiores necessitatibus. Earum!",
-    // },
   ];
 
   return (
@@ -63,7 +49,9 @@ const SectionFive: React.FC = () => {
         {articles.map((article) => (
           <div
             key={article.id}
-            className={`${article.id > 4 &&!isClick&& "hidden"} flex flex-col gap-2 w-96`}
+            className={`${
+              article.id > 4 && !isClick && "hidden"
+            } flex flex-col gap-2 w-96`}
           >
             <img
               className="min-h-[500px] max-h-[600px] h-full object-cover rounded-lg"

@@ -1,6 +1,5 @@
-import React from "react";
 
-const SectionTwo: React.FC = () => {
+const SectionTwo = () => {
   return (
     <section className=" py-20 px-40">
       <div className="py-20 flex flex-col gap-5 border-b border-slate-300">
@@ -22,3 +21,4 @@ const SectionTwo: React.FC = () => {
 };
 
 export { SectionTwo };
+

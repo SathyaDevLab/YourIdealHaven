@@ -1,6 +1,5 @@
-import React from "react";
 
-const SectionSeven: React.FC = () => {
+const SectionSeven = () => {
   return (
     <section>
       <div className="contact-bg flex flex-col gap-10 items-center justify-center">
@@ -14,7 +13,9 @@ const SectionSeven: React.FC = () => {
             className="bg-white w-80 px-6 py-4 rounded-lg outline-none"
             placeholder="enter you email"
           />
-          <button className=" bg-black border-slate-800 text-white px-20 rounded-lg">Sign Up</button>
+          <button className=" bg-black border-slate-800 text-white px-20 rounded-lg">
+            Sign Up
+          </button>
         </div>
       </div>
     </section>
@@ -22,3 +23,4 @@ const SectionSeven: React.FC = () => {
 };
 
 export { SectionSeven };
+

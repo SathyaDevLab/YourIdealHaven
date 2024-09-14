@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Image1,
   Image2,
@@ -9,7 +8,7 @@ import {
   Image7,
 } from "../../assets";
 
-const SectionOne: React.FC = () => {
+const SectionOne = () => {
   return (
     <section className=" h-screen overflow-hidden">
       <div className=" flex items-center justify-between h-full">
@@ -42,3 +41,4 @@ const SectionOne: React.FC = () => {
 };
 
 export { SectionOne };
+
