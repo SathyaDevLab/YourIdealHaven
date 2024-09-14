@@ -14,7 +14,7 @@ import {
 } from "../../assets";
 import { useState } from "react";
 
-const SectionThree = () => {
+const SectionThree: React.FC = () => {
   const [swiper, setSwiper] = useState<any>(null);
 
   const [activeSlide, setActiveSlide] = useState(1);

@@ -1,6 +1,6 @@
 import React from "react";
 
-const SectionSeven = () => {
+const SectionSeven: React.FC = () => {
   return (
     <section>
       <div className="contact-bg flex flex-col gap-10 items-center justify-center">

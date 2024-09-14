@@ -1,7 +1,7 @@
 import React from "react";
 import { Image3 } from "../../assets";
 
-const SectionFour = () => {
+const SectionFour: React.FC = () => {
   return (
     <section className="py-20">
       <div className="bg">

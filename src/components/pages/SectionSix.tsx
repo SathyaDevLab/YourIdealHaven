@@ -1,6 +1,6 @@
 import React from "react";
 
-const SectionSix = () => {
+const SectionSix: React.FC = () => {
   return (
     <section className="p-40">
       <h1 className=" text-6xl p-40 text-slate-800 text-center">The unique inveatment opportunity</h1>

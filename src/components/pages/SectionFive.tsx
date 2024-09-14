@@ -9,7 +9,7 @@ import {
   Image7,
 } from "../../assets";
 
-const SectionFive = () => {
+const SectionFive: React.FC = () => {
   const [isClick, setIsClick] = useState(false);
   const articles = [
     {

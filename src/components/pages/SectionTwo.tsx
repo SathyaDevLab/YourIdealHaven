@@ -1,6 +1,6 @@
 import React from "react";
 
-const SectionTwo = () => {
+const SectionTwo: React.FC = () => {
   return (
     <section className=" py-20 px-40">
       <div className="py-20 flex flex-col gap-5 border-b border-slate-300">

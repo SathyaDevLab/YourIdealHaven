@@ -9,7 +9,7 @@ import {
   Image7,
 } from "../../assets";
 
-const SectionOne = () => {
+const SectionOne: React.FC = () => {
   return (
     <section className=" h-screen overflow-hidden">
       <div className=" flex items-center justify-between h-full">
