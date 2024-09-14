@@ -1,4 +1,3 @@
-import React from "react";
 import { BrandLogo } from "../../assets";
 
 const Navbar: React.FC = () => {
