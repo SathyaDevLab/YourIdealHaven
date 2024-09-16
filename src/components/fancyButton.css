@@ -1,0 +1,16 @@
+.fancy-button{
+  font-size: 17px;
+  padding: 0.5em 2em;
+  border: transparent;
+  background: #6b21a8;
+  color: white;
+  border-radius: 10px;
+}
+
+.fancy-button:hover {
+  background: linear-gradient(90deg, #a855f7 0%, #a855f7 100%);
+}
+
+.fancy-button:active {
+  transform: translate(0em, 0.2em);
+}

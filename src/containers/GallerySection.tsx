@@ -1,6 +1,5 @@
 import { A11y, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import { useState } from "react";
 import {
@@ -11,11 +10,11 @@ import {
   Image5,
   Image6,
   Image7,
-} from "../../assets";
+} from "../assets";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-const SectionThree = () => {
+const GallerySection = () => {
   const [swiper, setSwiper] = useState<any>(null);
-
   const [activeSlide, setActiveSlide] = useState(1);
 
   const imgs = [
@@ -29,10 +28,22 @@ const SectionThree = () => {
   ];
 
   const CustomPrevArrow = () => (
-    <button className="swiper-button-prev">Prev</button>
+    <button
+      className={`swiper-button-prev transition hover:bg-slate-200 p-2 rounded-full ${
+        activeSlide === 1 && "text-slate-400 hover:bg-slate-100 "
+      }`}
+    >
+      <FaArrowLeft />
+    </button>
   );
   const CustomNextArrow = () => (
-    <button className="swiper-button-next">Next</button>
+    <button
+      className={`swiper-button-next transition hover:bg-slate-200 p-2 rounded-full ${
+        activeSlide === imgs.length && "text-slate-400 hover:bg-slate-100 "
+      }`}
+    >
+      <FaArrowRight />
+    </button>
   );
 
   const handlePrev = () => {
@@ -43,26 +54,28 @@ const SectionThree = () => {
   };
 
   return (
-    <section className="p-20">
-      <div className="flex items-center justify-around mb-10">
-        <h1 className="text-4xl font-bold">YouRIdealHavel gallery</h1>
-        <div className="custom-navigation flex items-center gap-5">
-          <div onClick={handlePrev}>
+    <section className="p-5 md:p-10 lg:p-20 overflow-hidden" id="gallery">
+      <div className="flex flex-col md:flex-row items-center justify-between mb-8">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center md:text-left">
+          Explore Our Gallery
+        </h1>
+        <div className="custom-navigation flex items-center gap-4 mt-4 md:mt-0">
+          <button onClick={handlePrev} className="swiper-button-prev">
             <CustomPrevArrow />
-          </div>
-          <span>
+          </button>
+          <span className="text-base md:text-lg lg:text-xl">
             {activeSlide}/{imgs.length}
           </span>
-          <div onClick={handleNext}>
+          <button onClick={handleNext} className="swiper-button-next">
             <CustomNextArrow />
-          </div>
+          </button>
         </div>
       </div>
-      <div>
+      <div className="swiper-container-wrapper">
         <Swiper
-          className="h-[500px] px-20 ml-40"
+          className="h-[300px] md:h-[400px] lg:h-[500px]"
           modules={[Navigation, A11y]}
-          spaceBetween={50}
+          spaceBetween={20}
           slidesPerView={1}
           navigation={{
             prevEl: ".swiper-button-prev",
@@ -76,9 +89,9 @@ const SectionThree = () => {
           {imgs.map((slide) => (
             <SwiperSlide key={slide.id}>
               <img
-                className="h-full w-[90%] rounded-xl object-cover"
+                className="h-full w-full rounded-xl object-cover"
                 src={slide.img}
-                alt="slide image"
+                alt={`Slide ${slide.id}`}
               />
             </SwiperSlide>
           ))}
@@ -88,4 +101,4 @@ const SectionThree = () => {
   );
 };
 
-export { SectionThree };
+export { GallerySection };
