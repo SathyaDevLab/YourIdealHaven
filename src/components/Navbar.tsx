@@ -1,13 +1,12 @@
-import { BrandLogo } from "../assets";
-import {
-  FaMapMarkerAlt,
-  FaInfoCircle,
-  FaEnvelope,
-  FaBars,
-} from "react-icons/fa";
-import "./navbar.css";
 import { useState } from "react";
+import {
+  FaEnvelope,
+  FaInfoCircle,
+  FaMapMarkerAlt
+} from "react-icons/fa";
+import { BrandLogo } from "../assets";
 import { HoverButton } from "./HoverButton";
+import "./navbar.css";
 
 const nav = [
   { id: 1, text: "Location", icon: <FaMapMarkerAlt /> },
@@ -62,3 +61,4 @@ const Navbar: React.FC = () => {
 };
 
 export { Navbar };
+
